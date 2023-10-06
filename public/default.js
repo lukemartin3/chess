@@ -5,6 +5,13 @@ window.onload = function() {
     initGame();
 };
 
+// setup my socket client
+var socket = io();
+
+window.onClick = function(e){
+    socket.emit('message', 'hello Player');
+};
+
 var initGame = function() {
     var cfg = {
         draggable: true,
